@@ -1,6 +1,6 @@
 # LAB-HALLS-AND-LECTURE-HALLS-RESERVATION-SYSTEM
 
-![bird_2](https://github.com/user-attachments/assets/8647f487-dfa3-4271-ae3c-703c08778cc7)
+Logo
 
 LAB-HALLS-AND-LECTURE-HALLS-RESERVATION-SYSTEM is a powerful MERN stack application designed to Streamlines booking, manages scheduling, optimizes facility use, enhances efficiency.. It leverages MongoDB, Express.js, React, and Node.js to deliver a seamless and dynamic user experience.
 
