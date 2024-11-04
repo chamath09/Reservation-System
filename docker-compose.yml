@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    container_name: group_server_container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server:/app  
+      - /app/node_modules  
+    environment:
+      MONGO_URL: mongodb+srv://landlreservationsysteme:VhNv6O7Ubgt9bOoR@reservationsystem.fw2np.mongodb.net/?retryWrites=true&w=majority&appName=ReservationSystem
+
+  client:
+    build: ./client
+    container_name: group_client_container
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+
+  admin:
+    build: ./admin
+    container_name: admin_container
+    ports:
+      - "5174:5174"
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./admin:/app
+      - /app/node_modules
+
+volumes:
+  mongo_data:
